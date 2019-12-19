@@ -1,0 +1,46 @@
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.title {
+  text-transform: uppercase;
+}
+.title--h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #fff;
+}
+.input--filled {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+[class*="--flex-center"] {
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  background-color: #f00;
+}
+.main {
+  width: 80%;
+  max-width: 1200px;
+  min-width: 20vw;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.main__section {
+  width: 100%;
+  padding: 20px;
+}
+.main__section.input-dati {
+  margin-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px #000;
+}
+.input-dati__title {
+  margin-bottom: 10px;
+}
+.main__section__dati {
+  color: #f00;
+}

@@ -1,6 +1,10 @@
+function Bg() {
+  document.getElementById("name").classList.add('input--filled');
+}
 function Acquista() {
   var passeggero = document.form.name.value;
   passeggero = passeggero.match(/^[A-Za-z ]+$/);
+
   distanza = Math.round(distanza);
   var eta = document.form.choseAge.value;
   if (passeggero == null || /\S/.test(passeggero) == false) {

@@ -15,19 +15,19 @@
     <main class="main">
       <section class="main__section input-dati">
         <h2 class="input-dati__title title--h2 title"> calcola il prezzo del tuo biglietto</h2>
-        <div class="main__section__data">
+        <form id="form" class="main__section__data">
           <div class="main__section__data__row-data row--flex-center">
             <div class="main__section__data__col-name">
               <label for="name" class="label">
                 Nome Cognome
               </label>
-              <input id="name" class="input" type="text" placeholder="Inserisci il tuo nome">
+              <input id="name" class="input" type="text" name="name" placeholder="Inserisci il tuo nome">
             </div>
             <div class="main__section__data__col-travel">
               <label for="travel" class="label">
                 Km da percorrere
               </label>
-              <input id="travel" class="input" type="number" placeholder="Inserisci i km">
+              <input id="travel" class="input" type="number" name="travel" placeholder="Inserisci i km">
             </div>
             <div class="main__section__data__col-age">
               <label for="chose-age" class="label">
@@ -49,10 +49,10 @@
             </div>
           </div>
           <div class="main__section__data__row-button row--flex-center">
-            <button class="btn">Genera</button>
-            <button class="btn">Annulla</button>
+            <button class="btn" onclick="Acquista()">Genera</button>
+            <button class="btn" onclick="Reset()">Annulla</button>
           </div>
-        </div>
+        </form>
       </section>
       <section class="main__section output-biglietto">
         <h2 class="output-biglietto__title title--h2 title">il tuo biglietto</h2>

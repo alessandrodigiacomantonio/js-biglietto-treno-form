@@ -27,4 +27,7 @@
 //       }
 //   }
 // }
-document.getElementsByClassName('option-mag').style.background:linearGradient(rgba(179,46,83,0.3) 0%,rgba(179,46,83,0.4) 100%);
+
+function Reset() {
+  document.getElementById('form').reset();
+}

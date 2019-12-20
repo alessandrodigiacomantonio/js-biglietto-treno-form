@@ -15,7 +15,7 @@
     <main class="main">
       <section class="main__section input-dati">
         <h2 class="input-dati__title title--h2 title"> calcola il prezzo del tuo biglietto</h2>
-        <form id="form" class="main__section__data">
+        <form id="form" class="main__section__data" name="form">
           <div class="main__section__data__row-data row--flex-center">
             <div class="main__section__data__col-name">
               <label for="name" class="label">
@@ -49,8 +49,8 @@
             </div>
           </div>
           <div class="main__section__data__row-button row--flex-center">
-            <button class="btn" onclick="Acquista()">Genera</button>
-            <button class="btn" onclick="Reset()">Annulla</button>
+            <input type="button" class="btn" value="Genera" onclick="Acquista()">
+            <input type="button" class="btn" value="Annula" onclick="Reset()">
           </div>
         </form>
       </section>

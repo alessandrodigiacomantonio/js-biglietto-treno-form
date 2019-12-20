@@ -9,6 +9,7 @@ html {
 }
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #b32e53;
 }
 .dis_none {
   display: none;
@@ -20,6 +21,13 @@ body {
   font-size: 2.4rem;
   text-align: center;
   color: #fff;
+}
+.title--h3 {
+  font-size: 1.8rem;
+}
+.title--h4 {
+  font-size: 1.6rem;
+  text-align: center;
 }
 .btn {
   background-color: #d3d3d3;
@@ -96,13 +104,15 @@ body {
 .option-over {
   background: linear-gradient(rgba(179,46,83,0.1) 0%, rgba(179,46,83,0.2) 100%);
 } */
+.th,
+.td {
+  width: 180px;
+  text-align: left;
+}
 [class*="--flex-center"] {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.wrapper {
-  background-color: #b32e53;
 }
 .main {
   width: 80%;
@@ -129,4 +139,27 @@ body {
 }
 .main__section__data__col-travel {
   margin: 0 40px;
+}
+.main__section__ticket {
+  background-color: #fff;
+  padding: 20px;
+}
+.main__section__ticket__content {
+  display: flex;
+  height: 139px;
+}
+.__ticket__content__passenger {
+  padding: 20px 15px;
+  background-color: #828282;
+  border: 1px solid #9b9b9b;
+}
+.__ticket__content__passenger__name {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.__ticket__content__data {
+  padding: 20px 15px;
+  border: 1px solid #9b9b9b;
+  border-right: 0;
 }

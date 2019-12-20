@@ -36,4 +36,5 @@ function Acquista() {
 function Reset() {
   document.getElementsByClassName('main__section__ticket')[0].classList.add('opacity_0');
   document.getElementById('form').reset();
+  document.getElementById('name').classList.remove('input--filled');
 }

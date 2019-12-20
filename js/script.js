@@ -1,39 +1,37 @@
 function Acquista() {
   var passeggero = document.form.name.value;
-  console.log(passeggero);
   passeggero = passeggero.match(/^[A-Za-z ]+$/);
-  console.log(passeggero);
-  var distanza = document.form.travel.value;
-  console.log(distanza);
   distanza = Math.round(distanza);
-  console.log(distanza);
-  // if (distanza < 1 || distanza > 500 || isNaN(distanza)) {
-  //   alert('Purtroppo hai inserito delle distanze non coperte dal nostro servizio di trasporti, ci spiace !');
-  // } else {
-  //     var prezzoDefault = distanza * 0.21;
-  //     var eta = prompt("Qual è la tua età?");
-  //     var anni = eta.match(/\d+/);
-  //     anni = parseInt(anni);
-  //     if (isNaN(anni)) {
-  //       alert('Non hai inserito un\'età valida !');
-  //     } else if (anni > 122) {
-  //         alert('Sarebbe fantastico essere così longevi, ma hai un\'età maggiore della persona più anziana di tutti i tempi, il che mi sembra improbabile :D');
-  //     } else if (anni >= 65) {
-  //         var prezzo = (prezzoDefault - (prezzoDefault * 40 / 100)).toFixed(2);
-  //         alert('Il prezzo del biglietto è di \n' + '€ ' + prezzo +'\n Grazie per aver scelto il nostro servizio e Buon Viaggio');
-  //     } else if (anni < 65 && eta > 17) {
-  //         alert('il prezzo del biglietto è di \n' + '€ ' + prezzoDefault.toFixed(2) + '\n Grazie per aver scelto il nostro servizio e Buon Viaggio');
-  //     } else if (anni <= 17 && anni > 2) {
-  //         var prezzo = (prezzoDefault - (prezzoDefault * 20 / 100)).toFixed(2);
-  //         alert('Il prezzo del biglietto è di \n' + '€ ' + prezzo +'\n   Grazie per aver scelto il nostro servizio e Buon Viaggio');
-  //     } else {
-  //         alert('I bebè, fino a 2 anni, viaggiano gratis !');
-  //     }
-  // }
+  var eta = document.form.choseAge.value;
+  if (passeggero == null || /\S/.test(passeggero) == false) {
+    alert('Ops, qualcosa è andato storto: hai inserito un nome non valido, sono ammessi solo caratteri alfabetici e spazi !');
+  } else if (distanza < 1 || distanza == null) {
+    alert('Purtroppo hai inserito delle distanze non coperte dal nostro servizio di trasporti, ci spiace !');
+  } else {
+      document.getElementsByClassName('main__section__ticket')[0].classList.remove('opacity_0');
+      var prezzoDefault = distanza * 0.21;
+      if (eta == 'over65') {
+      var prezzo = (prezzoDefault - (prezzoDefault * 0.4)).toFixed(2);
+      document.getElementsByClassName('__data__discount')[0].innerHTML='Biglietto Silver';
+      document.getElementsByClassName('__data__cost')[0].innerHTML='€ ' + prezzo;
+    } else if (eta == 'maggiorenne') {
+      document.getElementsByClassName('__data__discount')[0].innerHTML='Biglietto Standard';
+      document.getElementsByClassName('__data__cost')[0].innerHTML='€ ' + prezzoDefault.toFixed(2);
+    } else {
+          var prezzo = (prezzoDefault - (prezzoDefault * 0.2)).toFixed(2);
+          document.getElementsByClassName('__data__discount')[0].innerHTML='Biglietto Junior';
+          document.getElementsByClassName('__data__cost')[0].innerHTML='€ ' + prezzo;
+          document.getElementsByClassName('__ticket__content__passenger__name')[0].innerHTML=passeggero;
+          var binario = (Math.ceil(Math.random()*10));
+          document.getElementsByClassName('__data__platform')[0].innerHTML=binario;
+          var codiceCP = (Math.ceil(Math.random()*10000)+90000);
+          document.getElementsByClassName('__data__code')[0].innerHTML=codiceCP;
+      }
+  }
+
 }
 function Reset() {
-  getId('form').reset();
+  document.getElementsByClassName('main__section__ticket')[0].classList.add('opacity_0');
+  document.getElementById('form').reset();
 }
 //input--filled
-  // document.getElementsByClassName('__ticket__content__passenger__name')[0].innerHTML=passeggero;
-  // document.getElementsByClassName('__ticket__content__passenger__travel')[0].innerHTML=distanza;

@@ -21,26 +21,28 @@
               <label for="name" class="label">
                 Nome Cognome
               </label>
-              <input id="name" class="input" type="text" placeholder="inserisci il tuo nome">
+              <input id="name" class="input" type="text" placeholder="Inserisci il tuo nome">
             </div>
             <div class="main__section__data__col-travel">
               <label for="travel" class="label">
                 Km da percorrere
               </label>
-              <input id="travel" class="input" type="number" placeholder="inserisci i km">
+              <input id="travel" class="input" type="number" placeholder="Inserisci i km">
             </div>
             <div class="main__section__data__col-age">
               <label for="chose-age" class="label">
                 Fascia d'et&agrave;
               </label>
-              <select id="chose-age" class="chose-age" name="chose-age">
-                <option value="maggiorenne">
+              <select id="chose-age" class="select chose-age" name="chose-age">
+                <option class="option dis_none" value="">
+                </option>
+                <option class="option option-mag" value="maggiorenne">
                   Maggiorenne
                 </option>
-                <option value="minorette">
+                <option class="option option-min" value="minorette">
                   Minorenne
                 </option>
-                <option value="over65">
+                <option class="option option-over" value="over65">
                   Over 65
                 </option>
               </select>

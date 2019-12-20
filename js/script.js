@@ -4,8 +4,7 @@ function Bg() {
 function Acquista() {
   var passeggero = document.form.name.value;
   passeggero = passeggero.match(/^[A-Za-z ]+$/);
-
-  distanza = Math.round(distanza);
+  var distanza = Math.round(distanza);
   var eta = document.form.choseAge.value;
   if (passeggero == null || /\S/.test(passeggero) == false) {
     alert('Ops, qualcosa è andato storto: hai inserito un nome non valido, sono ammessi solo caratteri alfabetici e spazi !');
@@ -38,4 +37,3 @@ function Reset() {
   document.getElementsByClassName('main__section__ticket')[0].classList.add('opacity_0');
   document.getElementById('form').reset();
 }
-//input--filled

@@ -107,6 +107,7 @@ body {
 .th,
 .td {
   width: 180px;
+  font-size: 1.5rem;
   text-align: left;
 }
 [class*="--flex-center"] {
@@ -161,5 +162,6 @@ body {
 .__ticket__content__data {
   padding: 20px 15px;
   border: 1px solid #9b9b9b;
+  border-left: 0;
   border-right: 0;
 }
